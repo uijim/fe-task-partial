@@ -1,9 +1,13 @@
 # Movie task
 
 😍 Be sure to write comments, including and any assumptions
+
 🧐 We’re most interested to see problem solving and your approach
+
 😇 Keep it simple, keep it DRY, but don’t over complicate or over engineer
+
 🤓 We've added some files and styles to give you a head start - but feel free to blaze your own trail if you prefer
+
 😎 Your time is precious. If you aren’t able to complete all steps, or if you use third party components to speed things up - no worries! Just detail what you’ve prioritised
 
 ## Instructions:
