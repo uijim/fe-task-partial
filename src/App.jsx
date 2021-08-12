@@ -1,8 +1,5 @@
-// import { useFilteredMovies } from './hooks/useFilteredMovies';
-// import { fetchMovies } from './api/movies';
-// import { fetchGenres } from './api/genres';
-
-import './styles.css'; // check this file out & feel free to use the classes
+import { fetchGenres, fetchMovies } from './api'; // you may add functionality to these functions, but please use them
+import './styles.css'; // have a look at this file and feel free to use the classes
 
 export default function App() {
   return (
