@@ -1,1 +1,1 @@
-export const fetchGenres = () => fetch('./genres.json');
+export const fetchGenres = () => fetch('./genres.json').then(response => response.json());
