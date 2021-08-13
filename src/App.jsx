@@ -18,6 +18,7 @@ export default function App() {
             <Movie
               key={movie.id}
               title={movie.title}
+              imagePath={movie.poster_path}
               description={movie.overview}
               rating={movie.vote_average}
               popularity={movie.popularity}

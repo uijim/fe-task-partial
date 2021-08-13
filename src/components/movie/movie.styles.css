@@ -1,21 +1,16 @@
 .movie {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: minmax(3rem, 1fr) 2fr;
+    gap: 2rem;
+    grid-template-columns: minmax(3rem, auto) 2fr;
 }
 
 .movie-title {
     font-size: 1.6rem;
 }
 
-.movie-image {
-    border-radius: 0.2rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-
 .movie-content {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     grid-template-rows: auto 1fr auto;
 }
 
