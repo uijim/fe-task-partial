@@ -1,20 +1,28 @@
+import { useMemo } from 'react';
+
 import { Header, Movie } from './components';
-import { useMovies } from './hooks';
+import { useGenres, useMovies } from './hooks';
+import { decorateMoviesWithGenres } from './helpers';
 
 import './styles.css'; // have a look at this file and feel free to use the classes
 
 export default function App() {
-  const { data, loading } = useMovies();
+  const { data: movies, loading: moviesLoading } = useMovies();
+  const { data: genres, loading: genresLoading } = useGenres();
+
+  const isLoading = moviesLoading || genresLoading;
+  const moviesDecorated = useMemo(() =>
+    decorateMoviesWithGenres(movies, genres), [movies, genres]);
 
   return (
     <div className="container">
       <Header text="Now playing" icon />
-      {loading && <p>Loading...</p>}
+      {isLoading && <p>Loading...</p>}
 
-      {!loading && (
+      {!isLoading && (
         <div className="movies">
-          <div>Showing {data.length} movie{data.length === 1 ? '' : 's'}</div>
-          {!!data.length && data.map(movie => (
+          <div>Showing {movies.length} movie{movies.length === 1 ? '' : 's'}</div>
+          {!!moviesDecorated.length && moviesDecorated.map(movie => (
             <Movie
               key={movie.id}
               title={movie.title}
@@ -22,6 +30,7 @@ export default function App() {
               description={movie.overview}
               rating={movie.vote_average}
               popularity={movie.popularity}
+              genres={movie.genres}
             />
           ))}
         </div>
