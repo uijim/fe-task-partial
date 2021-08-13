@@ -7,12 +7,12 @@ export default function App() {
   const { data, loading } = useMovies();
 
   return (
-    <div>
+    <div className="container">
       <Header text="Now playing" icon />
       {loading && <p>Loading...</p>}
 
       {!loading && (
-        <div>
+        <div className="movies">
           <div>Showing {data.length} movie{data.length === 1 ? '' : 's'}</div>
           {!!data.length && data.map(movie => (
             <Movie

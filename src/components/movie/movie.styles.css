@@ -1,0 +1,31 @@
+.movie {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(3rem, 1fr) 2fr;
+}
+
+.movie-title {
+    font-size: 1.6rem;
+}
+
+.movie-image {
+    border-radius: 0.2rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.movie-content {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: auto 1fr auto;
+}
+
+.movie-meta {
+    align-content: start;
+    justify-content: start;
+    display: grid;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
