@@ -32,4 +32,7 @@
 
 ## Candidate notes
 
-> *Please add details of next steps or any notes for the reviewer here.*
+* Unfortunately didn't complete all tasks, finished 1 - 5 although I slightly misunderstood 5 and have actually done something similar to 7 :(
+* In terms of tasks that involve any filtering of the movies data, I'd be tempted to implement a basic reducer pattern within the useMovies hook or even create a new `useFilters()` hook to handle sorting and filtering of data sets.
+* It slightly pains me to say there are no tests here but some are desperately needed!
+* I decided to use `react-query` as it gives us nice features like data fetching, loading states error states and caching. I'm a fan!
